@@ -1,0 +1,65 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "comment": "Block unsafe git patterns, validate commit conventions",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/validate-git-commit.sh",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "comment": "Run type-check after TypeScript/JavaScript edits (non-blocking)",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/validate-after-edit.sh",
+            "timeout": 30000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "comment": "Auto-run CRUD tests after database migrations",
+            "command": "bash -c 'if echo \"$ARGUMENTS\" | jq -r \".tool_input.command // \\\"\\\"\" | grep -q \"supabase db push\"; then echo \"\\n🧪 Migration detected — running CRUD tests...\\n\" && node $CLAUDE_PROJECT_DIR/scripts/test-crud-with-auth.mjs; fi'",
+            "timeout": 120000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "comment": "Inject project context (phase, recent commits, git status, todos)",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/inject-session-context.sh",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "comment": "macOS notification when Claude needs input (remove if not on macOS)",
+            "command": "osascript -e 'display notification \"Claude needs your input\" with title \"Your Project\" sound name \"Glass\"' 2>/dev/null || true",
+            "timeout": 3000
+          }
+        ]
+      }
+    ]
+  }
+}
