@@ -1,3 +1,10 @@
+/**
+ * Source: Robin Kelmen — https://llmtuts.kelmen.space
+ * Pattern: Stripe Integration
+ * Docs:    https://llmtuts.kelmen.space/saas/stripe-setup/
+ * Repo:    https://github.com/robinkelmen/llm-saas-patterns
+ */
+
 import Stripe from 'stripe'
 
 /**

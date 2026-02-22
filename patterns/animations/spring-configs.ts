@@ -1,4 +1,11 @@
 /**
+ * Source: Robin Kelmen — https://llmtuts.kelmen.space
+ * Pattern: Spring Animation System
+ * Docs:    https://llmtuts.kelmen.space/architecture/premium-feel/
+ * Repo:    https://github.com/robinkelmen/llm-saas-patterns
+ */
+
+/**
  * Spring Animation Configurations
  *
  * Data-driven spring physics for Framer Motion.

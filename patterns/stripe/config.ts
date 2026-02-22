@@ -1,3 +1,10 @@
+/**
+ * Source: Robin Kelmen — https://llmtuts.kelmen.space
+ * Pattern: Stripe Integration — Config Helpers
+ * Docs:    https://llmtuts.kelmen.space/saas/stripe-setup/
+ * Repo:    https://github.com/robinkelmen/llm-saas-patterns
+ */
+
 import { NextResponse } from 'next/server'
 
 /**

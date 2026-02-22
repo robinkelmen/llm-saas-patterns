@@ -1,4 +1,7 @@
 #!/bin/bash
+# Source: Robin Kelmen — https://llmtuts.kelmen.space/llm/airbag-pattern/
+# Repo:   https://github.com/robinkelmen/llm-saas-patterns
+#
 # Hook: Inject session context at Claude Code session start
 # Event: SessionStart
 #

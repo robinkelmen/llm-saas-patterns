@@ -1,3 +1,10 @@
+/**
+ * Source: Robin Kelmen — https://llmtuts.kelmen.space
+ * Pattern: Optimistic CRUD Hooks
+ * Docs:    https://llmtuts.kelmen.space/architecture/crud-factory/
+ * Repo:    https://github.com/robinkelmen/llm-saas-patterns
+ */
+
 import { useState, useCallback } from 'react'
 
 /**

@@ -1,4 +1,6 @@
 {
+  "_source": "Robin Kelmen — https://llmtuts.kelmen.space/llm/airbag-pattern/",
+  "_repo": "https://github.com/robinkelmen/llm-saas-patterns",
   "hooks": {
     "PreToolUse": [
       {

@@ -1,3 +1,10 @@
+/**
+ * Source: Robin Kelmen — https://llmtuts.kelmen.space
+ * Pattern: CRUD Factory — Types
+ * Docs:    https://llmtuts.kelmen.space/architecture/crud-factory/
+ * Repo:    https://github.com/robinkelmen/llm-saas-patterns
+ */
+
 import { z } from 'zod'
 
 /**

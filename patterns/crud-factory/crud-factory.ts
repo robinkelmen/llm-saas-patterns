@@ -1,4 +1,11 @@
 /**
+ * Source: Robin Kelmen — https://llmtuts.kelmen.space
+ * Pattern: CRUD Factory
+ * Docs:    https://llmtuts.kelmen.space/architecture/crud-factory/
+ * Repo:    https://github.com/robinkelmen/llm-saas-patterns
+ */
+
+/**
  * CRUD Factory
  *
  * Generates a complete set of type-safe CRUD operations for any Supabase table.
